@@ -9,7 +9,7 @@ users = [
     {"name": "Roma", "birthday": datetime(year=2010, month=9, day=9)},
     {"name": "Andrii", "birthday": datetime(year=2008, month=10, day=20)},
     {"name": "Vadim", "birthday": datetime(year=2004, month=1, day=22)},
-    {"name": "Mykola", "birthday": datetime(year=2005, month=4, day=23)}]
+    {"name": "Mykola", "birthday": datetime(year=2007, month=4, day=23)}]
 def get_birthdays_per_week(user_list):
     result = []
     
