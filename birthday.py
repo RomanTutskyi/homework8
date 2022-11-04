@@ -16,29 +16,29 @@ def get_birthdays_per_week(user_list):
     current_month = date.today().month
     for person in user_list:
 
-        Month, Day = person['birthday'].month, person['birthday'].day
+        month, day = person['birthday'].month, person['birthday'].day
         this_year = date.today().year
         this_day = date.today().day
-        birthday = date(this_year, Month, Day)
-        if Month != current_month:
+        birthday = date(this_year, month, day)
+        if month != current_month:
             continue
         else:
             print("\n{:=^50}\n".format('ok, we have some candidats :)'))
 
 
         week_day = birthday.strftime('%A')
-        weeks_list = calendar.monthcalendar(this_year, Month)
+        weeks_list = calendar.monthcalendar(this_year, month)
         for week in weeks_list:
             if this_day in week:
                 cur_week = week
                 ind = weeks_list.index(week)
                 pre_week = weeks_list[ind-1]
                 working_week = pre_week[-2:]+cur_week[0:-2]
-                if Day not in working_week:
+                if day not in working_week:
                     print("Not this time")
                     continue
 
-                elif Day in working_week[0:2]:
+                elif day in working_week[0:2]:
                     if 'Monday' in result:
                         result['Monday'].append(person['name'])
                     else:
