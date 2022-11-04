@@ -38,7 +38,7 @@ def get_birthdays_per_week(user_list):
                     print("Not this time")
                     continue
 
-                elif day in working_week[0:2]:
+                elif day in working_week[2]:
                     if 'Monday' in result:
                         result['Monday'].append(person['name'])
                     else:
