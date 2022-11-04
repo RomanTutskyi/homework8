@@ -33,7 +33,7 @@ def get_birthdays_per_week(user_list):
                 cur_week = week
                 ind = weeks_list.index(week)
                 pre_week = weeks_list[ind-1]
-                working_week = pre_week[-2:]+cur_week[0:-2]
+                working_week = pre_week[-2:]+cur_week[-2]
                 if day not in working_week:
                     print("Not this time")
                     continue
